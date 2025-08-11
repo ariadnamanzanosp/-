@@ -1,0 +1,11 @@
+import requests
+
+bot_token = "Zg"
+chat_id = 23  # tu chat personal
+mensaje = "🔔 Prueba de notificación desde 20-07-25.py"
+
+url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+data = {"chat_id": chat_id, "text": mensaje}
+
+response = requests.post(url, data=data)
+print(response.json())
